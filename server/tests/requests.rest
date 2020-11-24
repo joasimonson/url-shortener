@@ -1,0 +1,14 @@
+POST http://localhost:3000/links HTTP/1.1
+content-type: application/json
+
+{
+    "url": "http://teste.com"
+}
+
+###
+
+GET http://localhost:3000/links/aKrjR HTTP/1.1
+
+###
+
+GET http://localhost:3000/links/aKrjR/stats HTTP/1.1
