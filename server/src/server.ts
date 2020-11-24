@@ -3,4 +3,4 @@ import database from './database';
 
 database.sync({force: true});
 
-app.listen(3000);
+app.listen(3333);
