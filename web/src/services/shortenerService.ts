@@ -1,21 +1,30 @@
 import api from './api';
 
-async function getLink(code: string) {
+export interface ShortenerResponse {
+    id: number;
+    url: string;
+    code: string;
+    urlShorten: string;
+    hits?: number;
+    updatedAt: string
+}
+
+async function getLink(code: string): Promise<ShortenerResponse> {
     const result = await api.get(`links/${code}`);
 
-    return result.data;
+    return result.data as ShortenerResponse;
 }
 
-async function getStats(code: string) {
+async function getStats(code: string): Promise<ShortenerResponse> {
     const result = await api.get(`links/${code}/stats`);
 
-    return result.data;
+    return result.data as ShortenerResponse;
 }
 
-async function generate(url: string) {
-    const result = await api.post('links', url);
+async function generate(url: string): Promise<ShortenerResponse> {
+    const result = await api.post('links', { url });
 
-    return result.data;
+    return result.data as ShortenerResponse;
 }
 
 export default {

@@ -23,11 +23,16 @@ const LinkModel = database.define<ILinkModel>('link', {
         unique: true,
         allowNull: false
     },
+    urlShorten: {
+        type: Sequelize.STRING(255),
+        unique: true,
+        allowNull: false
+    },
     hits: {
         type: Sequelize.INTEGER.UNSIGNED,
         allowNull: false,
         defaultValue: 0
-    }
+    },
 });
 
 export default LinkModel;

@@ -17,6 +17,7 @@ async function post(req: Request, res: Response) {
     const link = req.body as Link;
     link.code = generateCode();
     link.hits = 0;
+    link.urlShorten = `https://url-shortener/${link.code}`;
 
     const result = await linksRepository.add(link);
 

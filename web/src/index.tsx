@@ -5,6 +5,11 @@ import App from './App';
 
 import './index.css';
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faExclamationTriangle)
+
 ReactDOM.render(
   <React.StrictMode>
     <App />

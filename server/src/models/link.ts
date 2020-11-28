@@ -3,4 +3,5 @@ export type Link = {
     url: string;
     code?: string;
     hits?: number;
+    urlShorten?: string;
 }
