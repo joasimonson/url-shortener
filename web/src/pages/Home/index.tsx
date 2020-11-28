@@ -74,6 +74,8 @@ export default function Home() {
                                             <a href={urlShorten}>{urlShorten}</a>
                                             <br />
                                             <Button variant="outline-secondary" onClick={handleCopyLink}>Copy</Button>
+                                            <br />
+                                            <p>Track statistics: {urlShorten + '/stats'}</p>
                                         </>
                                     }
                                 </>
